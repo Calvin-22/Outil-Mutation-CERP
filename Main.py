@@ -23,7 +23,7 @@ hauteurG = int(input("Veuillez indiquer la hauteur de la goulotte désirée (mm)
 def zone():
 
 # Condition fréquence minimum 60 et condition picking
-    if frequence > 60 and NBC < 5 and hauteurG < 3.1:
+    if frequence > 60 and NBC < 5 and hauteurG < 3.2:
         reponse = True
     else:
         reponse = False
@@ -60,7 +60,7 @@ print ("  ")
 print(" -- Conclusions --  ")
 print ("  ")
 
-if NBC < 5 and hauteurG < 3.1:
+if NBC < 5 and hauteurG < 3.2:
     # Réponse et détermination du type de canaux (taille)
     if NbGoulotte > 1.2:
         print("Ce produit devrait aller dans une goulotte plus grande.", hauteurG, "mm, ne suffira probablement pas.")
