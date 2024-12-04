@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.py</font>
+</center></td></tr></table>
+<pre><span class="s0"># Titre : Programme simple d'aide à la mutation à l'automate</span>
+<span class="s0"># Date : 21-11-2024</span>
+<span class="s0"># Auteur : Calvin Nd.</span>
+
+<span class="s0"># Zone de saisie</span>
+<span class="s1">hauteur </span><span class="s2">= </span><span class="s1">int</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;Veuillez indiquer la hauteur du produit (en mm) : &quot;</span><span class="s2">))</span>
+<span class="s1">moyenne </span><span class="s2">= </span><span class="s1">int</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;Veuillez indiquer la moyenne de vente par mois : &quot;</span><span class="s2">))</span>
+<span class="s1">frequence </span><span class="s2">= </span><span class="s1">int</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;Veuillez indiquer la fréquence picking : &quot;</span><span class="s2">))</span>
+<span class="s1">hauteurG </span><span class="s2">= </span><span class="s1">int</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;Veuillez indiquer la hauteur de la goulotte désirée (mm) : &quot;</span><span class="s2">))</span>
+
+<span class="s0"># Calculs des informations à partir des relevés INT040</span>
+<span class="s1">NBV </span><span class="s2">= </span><span class="s1">moyenne</span><span class="s2">/</span><span class="s4">25</span>
+<span class="s1">HT </span><span class="s2">= </span><span class="s1">hauteur </span><span class="s2">* </span><span class="s1">NBV</span>
+<span class="s1">NbGoulotte </span><span class="s2">= </span><span class="s1">HT</span><span class="s2">/</span><span class="s1">hauteurG</span>
+<span class="s1">NBC </span><span class="s2">= </span><span class="s1">moyenne </span><span class="s2">/ </span><span class="s1">frequence</span>
+
+<span class="s0"># Espacement pour lisibilité</span>
+<span class="s1">print </span><span class="s2">(</span><span class="s3">&quot;  &quot;</span><span class="s2">)</span>
+<span class="s1">print </span><span class="s2">(</span><span class="s3">&quot;  &quot;</span><span class="s2">)</span>
+<span class="s1">print </span><span class="s2">(</span><span class="s3">&quot;  &quot;</span><span class="s2">)</span>
+<span class="s1">print </span><span class="s2">(</span><span class="s3">&quot;  &quot;</span><span class="s2">)</span>
+<span class="s1">print </span><span class="s2">(</span><span class="s3">&quot;  &quot;</span><span class="s2">)</span>
+
+<span class="s0"># Zone de résultat</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s3">&quot; -- Relevé d'informations concernant votre produit --  &quot;</span><span class="s2">)</span>
+<span class="s1">print </span><span class="s2">(</span><span class="s3">&quot;  &quot;</span><span class="s2">)</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Nombre de boîtes vendues par jour : &quot;</span><span class="s2">, </span><span class="s1">round</span><span class="s2">(</span><span class="s1">NBV</span><span class="s2">))</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Hauteur totale : &quot;</span><span class="s2">, </span><span class="s1">round</span><span class="s2">(</span><span class="s1">HT</span><span class="s2">))</span>
+<span class="s1">print </span><span class="s2">(</span><span class="s3">&quot;Nombre de goulotte nécessaire : &quot;</span><span class="s2">, </span><span class="s1">round</span><span class="s2">(</span><span class="s1">NbGoulotte</span><span class="s2">))</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Nombre de boîte par commande : &quot;</span><span class="s2">, </span><span class="s1">round</span><span class="s2">(</span><span class="s1">NBC</span><span class="s2">))</span></pre>
+</body>
+</html>
