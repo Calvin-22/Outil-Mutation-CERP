@@ -60,7 +60,7 @@ print ("  ")
 print(" -- Conclusions --  ")
 print ("  ")
 
-if NBC < 5:
+if NBC < 5 and hauteurG < 3.1:
     # Réponse et détermination du type de canaux (taille)
     if NbGoulotte > 1.2:
         print("Ce produit devrait aller dans une goulotte plus grande.", hauteurG, "mm, ne suffira probablement pas.")
