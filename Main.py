@@ -23,7 +23,7 @@ hauteurG = int(input("Veuillez indiquer la hauteur de la goulotte désirée (mm)
 def zone():
 
 # Condition fréquence minimum 60 et condition picking
-    if frequence > 60 and NBC < 5:
+    if frequence > 60 and NBC < 5 and hauteurG < 3.1:
         reponse = True
     else:
         reponse = False
