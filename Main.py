@@ -1,5 +1,5 @@
 # Titre : Programme simple d'aide à la mutation à l'automate
-# Date : 21-11-2024
+# Date de création : 21-11-2024
 # Auteur : Calvin Nd.
 
 # Espacement pour lisibilité
@@ -95,12 +95,11 @@ if NBC < 5 and NbGoulotte < 3.2:
     # Réponse et détermination du type de canaux (taille)
     if NbGoulotte > 1.2:
         print("Dans cette configuration, envisager, si possible, une goulotte plus grande.")
-        print("Sinon, il faudrait sinon mettre en place", round(NbGoulotte, 1), "canaux.")
+        print("Sinon, il faudrait mettre en place", round(NbGoulotte, 1), "canaux.")
     else:
         pourcentage = NbGoulotte * 100
         print("Parfait pour cette configuration en terme de taille de goulotte, ce produit nécessitera précisement",
               round(pourcentage, 1), "% d'une goulotte de", hauteurG, "mm.")
-
 
 # Définition de la zone
 if zone():
