@@ -8,7 +8,7 @@ print ("  ")
 # Espacement pour titre
 print ("-- Bienvenue sur l'outil d'aide à la mutation automate --")
 print ("                    Créé par Calvin                      ")
-print ("                    N°version : 1.5                      ")
+print ("                    N°version : 2.0                      ")
 
 # Espacement pour lisibilité
 print ("  ")
