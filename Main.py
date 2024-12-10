@@ -8,16 +8,47 @@ print ("  ")
 # Espacement pour titre
 print ("-- Bienvenue sur l'outil d'aide à la mutation automate --")
 print ("                    Créé par Calvin                      ")
-print ("                    N°version : 1.0                      ")
+print ("                    N°version : 1.5                      ")
 
 # Espacement pour lisibilité
 print ("  ")
 
-# Zone de saisie
-hauteur = int(input("Veuillez indiquer la hauteur du produit (en mm) : "))
-moyenne = int(input("Veuillez indiquer la moyenne de vente par mois : "))
-frequence = int(input("Veuillez indiquer la fréquence : "))
-hauteurG = int(input("Veuillez indiquer la hauteur de la goulotte désirée (mm) : "))
+# Zone de saisie avec try/catch
+while True:
+    try:
+        hauteur = int(input("Veuillez indiquer la hauteur du produit (en mm) : "))
+        break
+    except ValueError:
+        print("Syntaxe invalide. Ce n'est pas un nombre valide. Réessayer.")
+        # Espacement pour lisibilité
+        print("  ")
+
+while True:
+    try:
+        moyenne = int(input("Veuillez indiquer la moyenne de vente par mois : "))
+        break
+    except ValueError:
+        print("Syntaxe invalide. Ce n'est pas un nombre valide. Réessayer.")
+        # Espacement pour lisibilité
+        print("  ")
+
+while True:
+    try:
+        frequence = int(input("Veuillez indiquer la fréquence : "))
+        break
+    except ValueError:
+        print("Syntaxe invalide. Ce n'est pas un nombre valide. Réessayer.")
+        # Espacement pour lisibilité
+        print("  ")
+
+while True:
+    try:
+        hauteurG = int(input("Veuillez indiquer la hauteur de la goulotte désirée (mm) : "))
+        break
+    except ValueError:
+        print("Syntaxe invalide. Ce n'est pas un nombre valide. Réessayer.")
+        # Espacement pour lisibilité
+        print("  ")
 
 # Fonction de détermination de la zone du produit correspondant
 def zone():
@@ -63,7 +94,7 @@ print ("  ")
 if NBC < 5 and NbGoulotte < 3.2:
     # Réponse et détermination du type de canaux (taille)
     if NbGoulotte > 1.2:
-        print("Dans cette configuration, envisager si possible une goulotte plus grande.")
+        print("Dans cette configuration, envisager, si possible, une goulotte plus grande.")
         print("Sinon, il faudrait sinon mettre en place", round(NbGoulotte, 1), "canaux.")
     else:
         pourcentage = NbGoulotte * 100
@@ -77,6 +108,3 @@ if zone():
     print("Ce produit peut aller à l'automate.")
 else:
     print("Ce produit doit aller au magasin. Il n'est pas compatible avec les exigences de l'automate.")
-
-# Espacement pour lisibilité
-print ("  ")
