@@ -16,37 +16,37 @@ print ("  ")
 # Zone de saisie avec try/catch
 while True:
     try:
-        hauteur = int(input("Veuillez indiquer la hauteur du produit (en mm) : "))
+        hauteur = int(input("> Veuillez indiquer la hauteur du produit (en mm) : "))
         break
     except ValueError:
-        print("Syntaxe invalide. Ce n'est pas un nombre valide. Réessayer.")
+        print("> Syntaxe invalide. Ce n'est pas un nombre valide. Réessayer.")
         # Espacement pour lisibilité
         print("  ")
 
 while True:
     try:
-        moyenne = int(input("Veuillez indiquer la moyenne de vente par mois : "))
+        moyenne = int(input("> Veuillez indiquer la moyenne de vente (par mois) : "))
         break
     except ValueError:
-        print("Syntaxe invalide. Ce n'est pas un nombre valide. Réessayer.")
+        print("> Syntaxe invalide. Ce n'est pas un nombre valide. Réessayer.")
         # Espacement pour lisibilité
         print("  ")
 
 while True:
     try:
-        frequence = int(input("Veuillez indiquer la fréquence : "))
+        frequence = int(input("> Veuillez indiquer la fréquence picking mensuel (M-1) : "))
         break
     except ValueError:
-        print("Syntaxe invalide. Ce n'est pas un nombre valide. Réessayer.")
+        print("> Syntaxe invalide. Ce n'est pas un nombre valide. Réessayer.")
         # Espacement pour lisibilité
         print("  ")
 
 while True:
     try:
-        hauteurG = int(input("Veuillez indiquer la hauteur de la goulotte désirée (mm) : "))
+        hauteurG = int(input("> Veuillez indiquer la hauteur du canaux désiré à l'automate (mm) : "))
         break
     except ValueError:
-        print("Syntaxe invalide. Ce n'est pas un nombre valide. Réessayer.")
+        print("> Syntaxe invalide. Ce n'est pas un nombre valide. Réessayer.")
         # Espacement pour lisibilité
         print("  ")
 
@@ -81,10 +81,10 @@ print ("  ")
 # Zone de résultat
 print(" -- Relevé d'informations concernant votre produit --  ")
 print ("  ")
-print("Nombre de boîtes vendues par jour : ", round(NBV))
-print("Hauteur totale nécessaire : ", round(HT),"mm")
-print ("Nombre de goulotte de", hauteurG,"mm","nécessaire : ", round(NbGoulotte, 1))
-print("Nombre de boîte par commande : ", round(NBC))
+print("> Nombre de boîtes vendues (par jour) : ", round(NBV))
+print("> Hauteur totale nécessaire (par jour) : ", round(HT),"mm")
+print("> Nombre de canaux de", hauteurG,"mm","nécessaire (par jour) : ", round(NbGoulotte, 2))
+print("> Nombre de boîte par commande (en moyenne) : ", round(NBC))
 
 # Espacement pour lisibilité et titre
 print ("  ")
@@ -94,16 +94,16 @@ print ("  ")
 if NBC < 5 and NbGoulotte < 3.2:
     # Réponse et détermination du type de canaux (taille)
     if NbGoulotte > 1.2:
-        print("Dans cette configuration, envisager, si possible, une goulotte plus grande.")
-        print("Sinon, il faudrait mettre en place", round(NbGoulotte, 1), "canaux.")
+        print("> Dans cette configuration, il serait souhaitable d'opter pour une hauteur de canaux plus grande.")
+        print("> Sinon, il faudrait mettre en place", round(NbGoulotte, 1), "canaux de", hauteurG, "mm.")
     else:
         pourcentage = NbGoulotte * 100
-        print("Parfait pour cette configuration en terme de taille de goulotte, ce produit nécessitera précisement",
-              round(pourcentage, 1), "% d'une goulotte de", hauteurG, "mm.")
+        print("> Parfait pour cette configuration en terme de hauteur de canaux, ce produit nécessitera précisement",
+              round(pourcentage, 1), "% d'un canaux de", hauteurG, "mm.")
 
 # Définition de la zone
 if zone():
     print("  ") # Espacement pour lisibilité
-    print("Ce produit peut aller à l'automate.")
+    print("> Ce produit peut aller à l'automate.")
 else:
-    print("Ce produit doit aller au magasin. Il n'est pas compatible avec les exigences de l'automate.")
+    print("> Ce produit doit aller au magasin. Il n'est pas compatible avec les exigences de l'automate.")
