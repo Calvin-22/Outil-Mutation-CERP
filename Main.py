@@ -119,11 +119,8 @@ while choix != "y":
 
     # Itération afin de quitter ou relancer le programme
     while choix != "y" and choix != "n":
-        while True:
-            try:
-                choix = str(input("> Quitter ? (y/n) : "))
-                break
-            finally:
-                print("> Réponse non attendue. Veuillez réessayer.")
-                # Espacement pour lisibilité
-                print("  ")
+        choix = str(input("> Quitter ? (y/n) : "))
+        if choix != "y" and choix != "n":
+            print("> Réponse non attendue. Veuillez réessayer.")
+            # Espacement pour lisibilité
+            print("  ")
