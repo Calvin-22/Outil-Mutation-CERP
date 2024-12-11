@@ -68,7 +68,6 @@ while choix != "y":
             reponse = False
         return reponse
 
-
     # Calculs des informations à partir des relevés INT040
 
     # Nombre de boîtes vendues par jour
@@ -118,6 +117,7 @@ while choix != "y":
     else:
         print("> Ce produit doit aller au magasin. Il n'est pas compatible avec les exigences de l'automate.")
 
+    # Itération afin de quitter ou relancer le programme
     while choix != "y" and choix != "n":
         while True:
             try:
